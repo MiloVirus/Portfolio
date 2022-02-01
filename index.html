@@ -12,11 +12,14 @@
 
     <!-- Bootstrap CSS -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:700|Roboto:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./parallax.js"></script>
     <link rel="stylesheet" href="style.css">
     <script>
                 $(document).ready(function(){
@@ -77,35 +80,69 @@
 		<!--Header-->
 		<header>
 			<div id="theparallax" class="container-fluid">
-				<div class="parallax">
+				<div class="parallax-window" data-parallax="scroll" data-z-index="1" data-image-src="./img/fondo.jpg">
 					<div class="text-vcenter">
 
 				    <h1 class="pagetitle">Milo Valencia</h1>
 				    <h3 class="pagetitle">Multimedia Engineer</h3>
+              </div>
+              
+            </div>
 	  			</div>
 				</div>
 			</div>
 		</header>
 		<!--Fin Header-->
+    
 		<!--Contents-->
     <div class="container-fluid" id="contents">
-		<div class="container-fluid">
-			<!--Services-->
-			<div class="row" id="services">
-					<div id="titleservices" class="col-md-12" align="center"><h3>Services</h3></div>
-					<div class="col-md-4" align="center"><a href="#servifoto"><img id="camera"class="round" src="img/camera.png" alt="" height="80px"></a><div id for="camera" class="subtext">Photography</div></div>
-					<div class="col-md-4" align="center"><a href="#containervideo"><img class="round" src="img/video.png" alt="" height="80px"></a><div class="subtext">Video</div></div>
-					<div class="col-md-4" align="center"><a href="#servifoto"><img class="round" src="img/design.png" alt="" height="80px"></a><div class="subtext">Design</div></div>
-			</div>
-		</div>
+    <!--Services-->
+		<div class="container-fluid" id="services">  
+      <div class="row" id="servicesrow">
+        <div id="col-photo" class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <img id="photography" class="img-fluid" src="img/photography.png" alt="photography">
+            </div>
+            <div class="col-md-12">
+              <label  class="text-center" for="photography"><h2>Photography</h2></label>
+            </div>
+          </div>   
+        </div>
+        <div id="col-video"  class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <img id="video" class="img-fluid" src="img/video.png" alt="video">
+            </div>
+            <div class="col-md-12">
+              <label  class="text-center" for="video"><h2>Video</h2></label>
+            </div>
+          </div>
+        </div>
+        <div id="col-development" class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <img id="development" class="img-fluid" src="img/development.png" alt="development">
+            </div>
+            <div class="col-md-12">
+              <label  class="text-center" for="development"><h2>Development</h2></label>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  	</div>
 			<!--End of Services-->
 			<!--Call to action-->
 			<div class="container-fluid">
-					<div class="parallax2">
+        <div class="parallax-window2" naturalHeight="350px" data-parallax="scroll" data-z-index="1" data-image-src="./img/fondo2.jpg">
 						<div class="textCall">
-							<div class="row" id="calltoaction">
-								<div class="col-md-12"><h3 style="color:white">Do you want to know more about me?</h3><a href="#nosotros"><button type="button" class="btn btn-danger">About Me</button></a></div>
-		  				</div>
+							<div class="container-fluid" id="nosotros">
+                <h2>About Me</h2>
+                <h3>Bachelor in Multimedia Engineering, three years of experience in Multimedia Video, Video Editing and Video Producing. </br>
+                  Skilled in HTML5, CSS3 and JavaScript
+                </h3>
+              </div>
 						</div>
 					</div>
 			</div>
@@ -226,29 +263,27 @@ function showSlides(n) {
 					<div id="titlevid" class="col-md-12" align="center"><h4>Video</h4></div>
 					<div class="row" id="videorow" align="center">
 
-								<div class="col-md-6">
-										<iframe width="100%" height="300" src="https://www.youtube.com/embed/uw4GIlmuW64" frameborder="0" allowfullscreen></iframe>
+								<div class="video col-md-6">
+									
+                      <iframe  width="100%" height="100%" height="100%" src="https://www.youtube.com/embed/uw4GIlmuW64" frameborder="0" allowfullscreen></iframe>
+                   
 								</div>
-								<div class="col-md-6">
-									<iframe width="100%" height="300" src="https://www.youtube.com/embed/NhtyN3fsIQo" frameborder="0" allowfullscreen></iframe>
+								<div class="video col-md-6">
+									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/eT3OmwKWcBw" frameborder="0" allowfullscreen></iframe>
 								</div>
+                <div class=" video col-md-6">
+									
+                  <iframe  width="100%" height="100%" height="100%" src="https://www.youtube.com/embed/NhtyN3fsIQo" frameborder="0" allowfullscreen></iframe>
+               
+            </div>
+            <div class="video col-md-6">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eT3OmwKWcBw" frameborder="0" allowfullscreen></iframe>
+            </div>
 					</div>
 				</div>
 			</div>
-			<!--End of Portfolio-->
 		</div>
-      <!--About Us-->
-      <div id="nosotros" class="container-fluid">
-        <div class="row" id="nosotrosrow" id="aboutus">
-          <div class="col-md-6">
-            <h3 id="bouth3">About me</h3>
-            <p id="textaboutus">Somos una empresa de Freelancers comprometidos con el video, la fotografía y el diseño. Creada en el año 2017 por Camilo Valencia, Ingeniero Multimedia, fotógrafo y videografo, con el fin de ofrecer todo tipo de servicio multimedia a empresas que necesiten consolidar su imagen gráfica y corporativa en los nuevos medios.</p>
-          </div>
-          <div class="col-md-6">
-            <iframe width="100%" height="300" src="https://www.youtube.com/embed/uw4GIlmuW64" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
+      
       <!--End of About us-->
       <!--Social Networks-->
       <div id="sociales">
